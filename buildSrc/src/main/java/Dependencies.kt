@@ -86,7 +86,7 @@ object Libs{
     // Jsoup
     val jsoup by lazy {"org.jsoup:jsoup:${Versions.jsoup}"}
 
-    // Ok http
+    // Okhttp
     val okhttp_logging by lazy {"com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"}
     val okhttp by lazy {"com.squareup.okhttp3:okhttp:${Versions.okhttp}"}
 }

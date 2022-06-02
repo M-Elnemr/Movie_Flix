@@ -146,4 +146,7 @@ dependencies {
     // Jsoup
     implementation(Libs.jsoup)
 
+    // Okhttp
+    implementation(Libs.okhttp)
+    implementation(Libs.okhttp_logging)
 }

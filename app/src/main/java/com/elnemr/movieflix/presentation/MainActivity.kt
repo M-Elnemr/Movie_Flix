@@ -1,7 +1,8 @@
-package com.elnemr.movieflix
+package com.elnemr.movieflix.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.elnemr.movieflix.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
