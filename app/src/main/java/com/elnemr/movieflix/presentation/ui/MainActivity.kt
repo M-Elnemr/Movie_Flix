@@ -1,10 +1,10 @@
-package com.elnemr.movieflix.presentation
+package com.elnemr.movieflix.presentation.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.elnemr.movieflix.R
+import com.elnemr.movieflix.presentation.ui.base.BaseActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
