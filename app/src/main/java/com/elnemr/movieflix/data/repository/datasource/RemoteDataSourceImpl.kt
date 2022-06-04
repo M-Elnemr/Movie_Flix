@@ -5,6 +5,7 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.elnemr.movieflix.data.apiservice.ApiInterface
 import com.elnemr.movieflix.data.repository.pagingdatasource.MoviesPagingSource
+import com.elnemr.movieflix.domain.model.GenresResponse
 import com.elnemr.movieflix.domain.model.Movie
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
@@ -21,6 +22,8 @@ class RemoteDataSourceImpl @Inject constructor(private val apiInterface: ApiInte
                 }
             }
         ).flow
+
+    override suspend fun fetchGenres(): GenresResponse = apiInterface.fetchAllGenre()
 
 
 }

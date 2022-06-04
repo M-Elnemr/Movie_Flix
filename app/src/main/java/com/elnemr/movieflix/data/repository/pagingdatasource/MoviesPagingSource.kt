@@ -17,7 +17,7 @@ class MoviesPagingSource @Inject constructor(private val apiInterface: ApiInterf
 
         return try {
             query["page"] = page.toString()
-            val response = apiInterface.fetchAllMovies(Constants.API_KEY, query)
+            val response = apiInterface.fetchAllMovies(query)
 
             LoadResult.Page(
                 data = response.movies,

@@ -33,7 +33,7 @@ abstract class BaseUseCase<T, Params>(
         get() = parentJob + mainDispatcher
 
     operator fun invoke(
-        params: Params?
+        params: Params? = null
     ) {
         launch(backgroundIODispatcher) {
             execute(params)

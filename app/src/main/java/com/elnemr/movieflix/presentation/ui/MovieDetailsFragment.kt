@@ -23,6 +23,15 @@ class MovieDetailsFragment : BaseFragment(R.layout.fragment_movie_details) {
         movie = args.movie
         initSharedTransition(binding.ivMovie, args.transName, this,
             movie.posterPath ?: "")
+
+        loadDataIntoViews()
+    }
+
+    private fun loadDataIntoViews() {
+        binding.title.text = movie.title
+        binding.voteAverage.text = movie.voteAverage.toString()
+        binding.originalLanguage.text = movie.originalLanguage
+        binding.date.text = movie.releaseDate
     }
 
 }

@@ -1,14 +1,13 @@
 package com.elnemr.movieflix.presentation.viewmodel
 
 import androidx.lifecycle.viewModelScope
-import androidx.paging.Pager
-import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
-import com.elnemr.movieflix.data.apiservice.ApiInterface
-import com.elnemr.movieflix.data.repository.pagingdatasource.MoviesPagingSource
+import com.elnemr.movieflix.domain.model.GenresResponse
 import com.elnemr.movieflix.domain.model.Movie
+import com.elnemr.movieflix.domain.result.NetworkResult
 import com.elnemr.movieflix.domain.usecase.FetchAllMoviesPagingUseCase
+import com.elnemr.movieflix.domain.usecase.FetchGenresUseCase
 import com.elnemr.movieflix.presentation.viewmodel.base.BaseViewModel
 import com.elnemr.movieflix.presentation.viewmodel.state.MoviesViewModelState
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -20,12 +19,24 @@ import javax.inject.Inject
 @HiltViewModel
 class MoviesViewModel @Inject constructor(
     private val fetchAllMoviesPagingUseCase: FetchAllMoviesPagingUseCase,
-    private val apiInterface: ApiInterface
+    private val fetchGenresUseCase: FetchGenresUseCase
 ) : BaseViewModel<MoviesViewModelState>() {
 
     init {
         viewModelScope.launch {
-            fetchAllMoviesPagingUseCase.getStateFlow().buffer().collect { onMoviesFetched(it) }
+            // every action into launch block to work concurrency
+            launch {
+                fetchAllMoviesPagingUseCase.getStateFlow().buffer().collect { onMoviesFetched(it) }
+            }
+            launch {
+                fetchGenresUseCase.getStateFlow().buffer().collect { onGenresFetched(it) }
+            }
+        }
+    }
+
+    private fun onGenresFetched(networkResult: NetworkResult<GenresResponse>) {
+        viewModelScope.launch {
+            mediator.emit(MoviesViewModelState.OnGenresFetched(networkResult))
         }
     }
 
@@ -37,8 +48,9 @@ class MoviesViewModel @Inject constructor(
         }
     }
 
-    fun fetchMovies(params: HashMap<String, String>) {
+    fun fetchMovies(params: HashMap<String, String>) =
         fetchAllMoviesPagingUseCase.invoke(params)
-    }
 
+    fun fetchGenres() =
+        fetchGenresUseCase.invoke()
 }
