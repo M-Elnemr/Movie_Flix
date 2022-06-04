@@ -3,7 +3,7 @@ package com.elnemr.movieflix.presentation.adapter.movie
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.elnemr.movieflix.databinding.RowItemMovieBinding
-import com.elnemr.movieflix.domain.model.Movie
+import com.elnemr.core.domain.model.Movie
 import com.elnemr.movieflix.presentation.adapter.base.BasePaginationAdapter
 import com.elnemr.movieflix.presentation.adapter.base.BaseViewHolder
 import com.elnemr.movieflix.presentation.util.preventDoubleClick

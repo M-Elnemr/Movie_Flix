@@ -3,11 +3,11 @@ package com.elnemr.movieflix.presentation.viewmodel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
-import com.elnemr.movieflix.domain.model.GenresResponse
-import com.elnemr.movieflix.domain.model.Movie
-import com.elnemr.movieflix.domain.result.NetworkResult
-import com.elnemr.movieflix.domain.usecase.FetchAllMoviesPagingUseCase
-import com.elnemr.movieflix.domain.usecase.FetchGenresUseCase
+import com.elnemr.core.domain.model.GenresResponse
+import com.elnemr.core.domain.model.Movie
+import com.elnemr.core.domain.result.NetworkResult
+import com.elnemr.core.domain.usecase.FetchAllMoviesPagingUseCase
+import com.elnemr.core.domain.usecase.FetchGenresUseCase
 import com.elnemr.movieflix.presentation.viewmodel.base.BaseViewModel
 import com.elnemr.movieflix.presentation.viewmodel.state.MoviesViewModelState
 import dagger.hilt.android.lifecycle.HiltViewModel

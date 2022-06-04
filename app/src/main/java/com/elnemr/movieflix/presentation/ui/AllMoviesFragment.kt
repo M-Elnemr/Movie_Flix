@@ -1,11 +1,7 @@
 package com.elnemr.movieflix.presentation.ui
 
 import android.os.Bundle
-import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.FragmentNavigatorExtras
@@ -15,10 +11,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
 import com.elnemr.movieflix.R
 import com.elnemr.movieflix.databinding.FragmentAllMoviesBinding
-import com.elnemr.movieflix.domain.model.Genre
-import com.elnemr.movieflix.domain.model.GenresResponse
-import com.elnemr.movieflix.domain.model.Movie
-import com.elnemr.movieflix.domain.result.NetworkResult
+import com.elnemr.core.domain.model.Genre
+import com.elnemr.core.domain.model.GenresResponse
+import com.elnemr.core.domain.model.Movie
+import com.elnemr.core.domain.result.NetworkResult
 import com.elnemr.movieflix.presentation.adapter.base.BaseAdapter
 import com.elnemr.movieflix.presentation.adapter.base.BasePaginationAdapter
 import com.elnemr.movieflix.presentation.adapter.genre.GenreAdapter
@@ -28,9 +24,7 @@ import com.elnemr.movieflix.presentation.adapter.movie.OnMovieClickInterface
 import com.elnemr.movieflix.presentation.ui.base.BaseFragment
 import com.elnemr.movieflix.presentation.viewmodel.MoviesViewModel
 import com.elnemr.movieflix.presentation.viewmodel.state.MoviesViewModelState
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.buffer
-import kotlinx.coroutines.withContext
 
 class AllMoviesFragment : BaseFragment(R.layout.fragment_all_movies),
     OnMovieClickInterface, OnGenreClickInterface {
@@ -118,7 +112,7 @@ class AllMoviesFragment : BaseFragment(R.layout.fragment_all_movies),
             is NetworkResult.ServerError -> {
             }
             is NetworkResult.Success -> response.data?.let {
-                val genreList: ArrayList<Genre> = response.data.genres as ArrayList<Genre>
+                val genreList: ArrayList<Genre> = response.data?.genres as ArrayList<Genre>
                 genreList.add(0, Genre("All", null))
                 genreAdapter.setDataList(genreList)
             }

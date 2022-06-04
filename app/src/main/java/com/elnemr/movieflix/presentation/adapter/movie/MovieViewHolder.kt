@@ -2,7 +2,7 @@ package com.elnemr.movieflix.presentation.adapter.movie
 
 import coil.load
 import com.elnemr.movieflix.databinding.RowItemMovieBinding
-import com.elnemr.movieflix.domain.model.Movie
+import com.elnemr.core.domain.model.Movie
 import com.elnemr.movieflix.presentation.adapter.base.BaseViewHolder
 
 class MovieViewHolder(private val binding: RowItemMovieBinding) :

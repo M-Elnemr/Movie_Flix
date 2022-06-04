@@ -1,7 +1,7 @@
 package com.elnemr.movieflix.presentation.adapter.movie
 
 import androidx.recyclerview.widget.DiffUtil
-import com.elnemr.movieflix.domain.model.Movie
+import com.elnemr.core.domain.model.Movie
 
 object MovieDiffCallBack : DiffUtil.ItemCallback<Movie>() {
     override fun areItemsTheSame(oldItem: Movie, newItem: Movie): Boolean {

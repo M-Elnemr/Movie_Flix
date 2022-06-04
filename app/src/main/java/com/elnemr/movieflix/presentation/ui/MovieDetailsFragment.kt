@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.View
 import com.elnemr.movieflix.R
 import com.elnemr.movieflix.databinding.FragmentMovieDetailsBinding
-import com.elnemr.movieflix.domain.model.Movie
+import com.elnemr.core.domain.model.Movie
 import com.elnemr.movieflix.presentation.ui.base.BaseFragment
 
 class MovieDetailsFragment : BaseFragment(R.layout.fragment_movie_details) {

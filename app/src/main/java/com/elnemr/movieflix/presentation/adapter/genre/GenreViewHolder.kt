@@ -1,7 +1,7 @@
 package com.elnemr.movieflix.presentation.adapter.genre
 
 import com.elnemr.movieflix.databinding.RowItemGenreBinding
-import com.elnemr.movieflix.domain.model.Genre
+import com.elnemr.core.domain.model.Genre
 import com.elnemr.movieflix.presentation.adapter.base.BaseViewHolder
 
 class GenreViewHolder(private val binding: RowItemGenreBinding) :

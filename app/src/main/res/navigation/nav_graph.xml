@@ -21,7 +21,7 @@
             app:argType="string" />
         <argument
             android:name="movie"
-            app:argType="com.elnemr.movieflix.domain.model.Movie" />
+            app:argType="com.elnemr.core.domain.model.Movie" />
 
     </fragment>
 </navigation>

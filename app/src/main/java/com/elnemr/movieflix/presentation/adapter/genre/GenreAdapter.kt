@@ -4,9 +4,8 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
-import com.elnemr.movieflix.R
 import com.elnemr.movieflix.databinding.RowItemGenreBinding
-import com.elnemr.movieflix.domain.model.Genre
+import com.elnemr.core.domain.model.Genre
 import com.elnemr.movieflix.presentation.adapter.base.BaseAdapter
 import com.elnemr.movieflix.presentation.adapter.base.BaseViewHolder
 import kotlinx.android.synthetic.main.row_item_genre.view.*
