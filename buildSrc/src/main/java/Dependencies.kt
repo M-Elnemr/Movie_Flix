@@ -89,6 +89,11 @@ object Libs{
     // Okhttp
     val okhttp_logging by lazy {"com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"}
     val okhttp by lazy {"com.squareup.okhttp3:okhttp:${Versions.okhttp}"}
+
+    // Shimmer
+    val shimmer_facebook by lazy {"com.facebook.shimmer:shimmer:${Versions.shimmer_facebook}"}
+    val shimmer_recyclerView by lazy {"com.todkars:shimmer-recyclerview:${Versions.shimmer_recyclerView}"}
+
 }
 
 

@@ -31,7 +31,8 @@ object Versions {
     const val gson = "2.8.7"
     const val jsoup = "1.13.1"
     const val okhttp = "4.9.1"
-
+    const val shimmer_facebook = "0.5.0"
+    const val shimmer_recyclerView = "0.4.1"
 
     // Test
     const val junit = "4.13.2"

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/allMoviesFragment">
+
+    <fragment
+        android:id="@+id/allMoviesFragment"
+        android:name="com.elnemr.movieflix.presentation.ui.AllMoviesFragment"
+        android:label="AllMoviesFragment" >
+        <action
+            android:id="@+id/action_allMoviesFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailsFragment"
+        android:name="com.elnemr.movieflix.presentation.ui.MovieDetailsFragment"
+        android:label="MovieDetailsFragment" >
+        <argument
+            android:name="transName"
+            app:argType="string" />
+        <argument
+            android:name="movie"
+            app:argType="com.elnemr.movieflix.domain.model.Movie" />
+
+    </fragment>
+</navigation>

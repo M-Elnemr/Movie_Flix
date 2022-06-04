@@ -8,7 +8,7 @@ import retrofit2.http.QueryMap
 
 interface ApiInterface {
     @GET("discover/movie")
-    fun fetchAllMovies(
+    suspend fun fetchAllMovies(
         @Query("api_key") apiKey: String?,
         @QueryMap params: Map<String, String>,
 //        @Query("with_genres") genre_id: String?,

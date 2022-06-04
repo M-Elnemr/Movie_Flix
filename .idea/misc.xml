@@ -3,7 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Movie_Flix/app/src/main/res/layout/row_item_movie.xml" value="0.16927083333333334" />
+        <entry key="..\:/Movie_Flix/app/src/main/res/layout-land/fragment_all_movies.xml" value="0.16302083333333334" />
+        <entry key="..\:/Movie_Flix/app/src/main/res/layout-land/fragment_movie_details.xml" value="0.11" />
+        <entry key="..\:/Movie_Flix/app/src/main/res/layout-land/row_item_movie_shimmer.xml" value="0.16302083333333334" />
+        <entry key="..\:/Movie_Flix/app/src/main/res/layout/activity_main.xml" value="0.18489583333333334" />
+        <entry key="..\:/Movie_Flix/app/src/main/res/layout/fragment_all_movies.xml" value="0.18489583333333334" />
+        <entry key="..\:/Movie_Flix/app/src/main/res/layout/fragment_movie_details.xml" value="0.18489583333333334" />
+        <entry key="..\:/Movie_Flix/app/src/main/res/layout/row_item_movie.xml" value="0.25" />
+        <entry key="..\:/Movie_Flix/app/src/main/res/layout/row_item_movie_shimmer.xml" value="0.125" />
       </map>
     </option>
   </component>

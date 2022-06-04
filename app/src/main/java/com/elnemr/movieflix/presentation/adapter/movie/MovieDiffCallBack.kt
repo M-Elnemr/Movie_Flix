@@ -1,14 +1,14 @@
 package com.elnemr.movieflix.presentation.adapter.movie
 
 import androidx.recyclerview.widget.DiffUtil
-import com.elnemr.movieflix.domain.model.Results
+import com.elnemr.movieflix.domain.model.Movie
 
-object MovieDiffCallBack : DiffUtil.ItemCallback<Results>() {
-    override fun areItemsTheSame(oldItem: Results, newItem: Results): Boolean {
+object MovieDiffCallBack : DiffUtil.ItemCallback<Movie>() {
+    override fun areItemsTheSame(oldItem: Movie, newItem: Movie): Boolean {
         return oldItem.id == newItem.id
     }
 
-    override fun areContentsTheSame(oldItem: Results, newItem: Results): Boolean {
+    override fun areContentsTheSame(oldItem: Movie, newItem: Movie): Boolean {
         return oldItem.hashCode() == newItem.hashCode()
     }
 }

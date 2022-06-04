@@ -66,7 +66,7 @@ object NetworkModule {
     ): ApiInterface {
         httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
         okHttpClientBuilder.addNetworkInterceptor(httpLoggingInterceptor)
-        okHttpClientBuilder.interceptors().add(apiKeyInterceptor)
+//        okHttpClientBuilder.interceptors().add(apiKeyInterceptor)
 
         okHttpClientBuilder.connectTimeout(1, TimeUnit.MINUTES)
         okHttpClientBuilder.readTimeout(1, TimeUnit.MINUTES)

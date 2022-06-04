@@ -149,4 +149,9 @@ dependencies {
     // Okhttp
     implementation(Libs.okhttp)
     implementation(Libs.okhttp_logging)
+
+    // Shimmer
+    implementation(Libs.shimmer_facebook)
+    implementation(Libs.shimmer_recyclerView)
+
 }
