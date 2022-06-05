@@ -24,7 +24,7 @@ class MoviesViewModel @Inject constructor(
 
     init {
         viewModelScope.launch {
-            // every action into launch block to work concurrency
+            // every action into launch block to execute together (in Parallel)
             launch {
                 fetchAllMoviesPagingUseCase.getStateFlow().buffer().collect { onMoviesFetched(it) }
             }
