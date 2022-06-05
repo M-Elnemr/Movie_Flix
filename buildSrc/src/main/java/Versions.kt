@@ -11,6 +11,7 @@ object Versions {
     const val core_ktx = "1.7.0"
     const val app_compat = "1.4.1"
     const val coil = "2.1.0"
+    const val splash = "1.0.0-rc01"
     const val material = "1.5.0"
     const val constraint_layout = "2.1.3"
     const val coordinatorlayout = "1.2.0"

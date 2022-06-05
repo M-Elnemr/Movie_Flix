@@ -64,29 +64,15 @@ android {
 
 dependencies {
     implementation(project(":core"))
-    implementation("androidx.core:core-splashscreen:1.0.0-rc01")
+
+    // Splash
+    implementation(Libs.splash)
+
     // Core
     implementation(Libs.core_ktx)
     implementation(Libs.app_compat)
     implementation(Libs.material)
     implementation(Libs.legacy_support)
-
-    // Test
-    testImplementation(TestLibs.junit)
-    testImplementation(TestLibs.coroutines)
-    testImplementation(TestLibs.truth)
-    testImplementation(TestLibs.mockk)
-    testImplementation(TestLibs.mockk_jvm)
-
-    // Android Test
-    androidTestImplementation(AndroidTestLibs.junit)
-    androidTestImplementation(TestLibs.truth)
-    androidTestImplementation(AndroidTestLibs.junit_compose)
-    debugImplementation(AndroidTestLibs.debug_compose_ui)
-    androidTestImplementation(AndroidTestLibs.arch_core)
-    androidTestImplementation(TestLibs.coroutines)
-    androidTestImplementation(TestLibs.mockk)
-    androidTestImplementation(TestLibs.mockk_jvm)
 
     // ViewModel
     implementation(Libs.viewModel)
@@ -98,9 +84,6 @@ dependencies {
     // Coil
     implementation(Libs.coil)
 
-    // Kotlin Serialization
-    implementation(Libs.kotlinx_serialization)
-
     // Room
     implementation(Libs.room_runtime)
     implementation(Libs.room_ktx)
@@ -111,44 +94,12 @@ dependencies {
     kapt(Libs.hilt_compiler_dagger_kapt)
     kapt(Libs.hilt_compiler_android_kapt)
 
-    // Retrofit
-    implementation(Libs.retrofit)
-    implementation(Libs.retrofit_converter_gson)
-    implementation(Libs.retrofit_converter_moshi)
-    implementation(Libs.kotshi)
-    kapt(Libs.kotshi_compiler)
-    implementation(Libs.moshi)
-    implementation(Libs.retrofit_coroutines)
-
-    // Lifecycle
-    implementation(Libs.lifecycle_extensions)
-    implementation(Libs.lifecycle)
-    implementation(Libs.lifecycle_viewmodel)
-    implementation(Libs.lifecycle_livedata)
-
     // Paging
     implementation(Libs.paging)
 
     // Navigation Component
     implementation(Libs.navigation_fragment)
     implementation(Libs.navigation_ui)
-
-    // Layout
-    implementation(Libs.coordinatorlayout)
-    implementation(Libs.constraint_layout)
-
-    // DataStore
-    implementation(Libs.datastore)
-
-    // Gson
-    implementation(Libs.gson)
-
-    // Jsoup
-    implementation(Libs.jsoup)
-
-    // Okhttp
-    implementation(Libs.okhttp)
-    implementation(Libs.okhttp_logging)
 
     // Shimmer
     implementation(Libs.shimmer_facebook)

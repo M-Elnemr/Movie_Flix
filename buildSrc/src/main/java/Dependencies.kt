@@ -28,6 +28,9 @@ object Libs{
     val material by lazy {"com.google.android.material:material:${Versions.material}"}
     val legacy_support by lazy {"androidx.legacy:legacy-support-v4:${Versions.legacy_support}"}
 
+    // Splash
+    val splash by lazy {"androidx.core:core-splashscreen:${Versions.splash}"}
+
     // Image Loading library Coil
     val coil by lazy {"io.coil-kt:coil:${Versions.coil}"}
 
